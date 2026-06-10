@@ -40,8 +40,11 @@ export function getCustomToolDefs(pi: any): McpToolDef[] {
     return [];
   }
 
+  // oh-my-pi returns string[] (names only); older runtimes return objects with
+  // name/description/parameters. Strings are filtered out because we can't build
+  // a valid MCP tool definition without a schema.
   return allTools
-    .filter((tool: any) => !BUILT_IN_TOOL_NAMES.has(tool.name))
+    .filter((tool: any) => typeof tool === "object" && tool !== null && !BUILT_IN_TOOL_NAMES.has(tool.name))
     .map((tool: any) => ({
       name: tool.name,
       description: tool.description,
