@@ -1,5 +1,5 @@
 {
-  "name": "pi-claude-cli",
+  "name": "omp-claude-cli",
   "version": "0.3.1",
   "description": "Pi coding agent extension that routes LLM calls through the Claude Code CLI",
   "main": "index.ts",
