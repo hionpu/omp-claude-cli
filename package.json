@@ -21,7 +21,8 @@
     "@mariozechner/pi-coding-agent": "^0.52.0"
   },
   "dependencies": {
-    "cross-spawn": "^7.0.6"
+    "cross-spawn": "^7.0.6",
+    "@oh-my-pi/pi-catalog": "^15.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
